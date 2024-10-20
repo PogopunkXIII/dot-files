@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# Define the source and target directories
+SOURCE_DIR="/home/pogopunkxiii/code/dot-files"
+TARGET_DIR="$HOME/.config"
+
+# Create the target directory if it doesn't exist
+mkdir -p "$TARGET_DIR"
+
+# Loop through all directories in the source directory
+for dir in "$SOURCE_DIR"/*/; do
+    # Check if it's a directory
+    if [ -d "$dir" ]; then
+        # Create a symlink in the target directory
+        ln -sfn "$dir" "$TARGET_DIR/"
+        echo "Linked $(basename "$dir") to $TARGET_DIR/"
+    fi
+done
+
+echo "All directories from $SOURCE_DIR have been symlinked to $TARGET_DIR."
