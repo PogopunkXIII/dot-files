@@ -1,3 +1,6 @@
+/* Dark theme. */
+@import "~/.cache/wal/colors-rofi-dark"
+
 configuration {
 /*	modes: "window,drun,run,ssh";*/
 /*	font: "mono 12";*/
