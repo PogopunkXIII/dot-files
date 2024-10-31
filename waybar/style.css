@@ -1,6 +1,4 @@
-
-
-@import '../../.cache/wal/colors-waybar.css';
+/*@import url("/home/pogopunkxiii/.cache/wal/colors-waybar.css");*/
 
 * {
     /* `otf-font-awesome` is required to be installed for icons */
@@ -15,6 +13,12 @@ window#waybar {
     transition-property: background-color;
     transition-duration: .5s;
     opacity:0.7;
+}
+
+#cpu {
+    background-color: #2ecc71;
+    /*background-color: var(--color3);*/
+    color: #000000;
 }
 
 window#waybar.hidden {
@@ -55,7 +59,7 @@ button:hover {
 
 /* you can set a style on hover for any module like this */
 #pulseaudio:hover {
-    background-color: #a37800;
+    background-color: #255E9F;
 }
 
 #workspaces button {
@@ -171,11 +175,6 @@ button:hover {
 
 label:focus {
     background-color: #000000;
-}
-
-#cpu {
-    background-color: #2ecc71;
-    color: #000000;
 }
 
 #memory {
