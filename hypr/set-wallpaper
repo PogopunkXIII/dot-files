@@ -25,4 +25,5 @@ RANDOM_FILE=${FILES[RANDOM % ${#FILES[@]}]}
 echo "Randomly selected file path: $RANDOM_FILE"
 
 wal -i $RANDOM_FILE
+$HOME/.confg/waybar/launch-waybar
 swww img $RANDOM_FILE --transition-step 10

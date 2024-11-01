@@ -1,4 +1,4 @@
-/*@import url("/home/pogopunkxiii/.cache/wal/colors-waybar.css");*/
+@import url("/home/pogopunkxiii/.cache/wal/colors-waybar.css");
 
 * {
     /* `otf-font-awesome` is required to be installed for icons */
@@ -12,13 +12,7 @@ window#waybar {
     color: #ffffff;
     transition-property: background-color;
     transition-duration: .5s;
-    opacity:0.7;
-}
-
-#cpu {
-    background-color: #2ecc71;
-    /*background-color: var(--color3);*/
-    color: #000000;
+    opacity:0.8;
 }
 
 window#waybar.hidden {
@@ -102,14 +96,10 @@ button:hover {
 #idle_inhibitor,
 #scratchpad,
 #power-profiles-daemon,
-#mpd {
-    padding: 0 10px;
-    color: #ffffff;
-}
 
 #window,
 #workspaces {
-    margin: 0 4px;
+    margin: 0 0px;
 }
 
 /* If workspaces is the leftmost module, omit left margin */
@@ -123,17 +113,62 @@ button:hover {
 }
 
 #clock {
-    background-color: #64727D;
+    background-color: @color1;
+    border-radius: 0 15px 15px 0;
+    padding: 0 10px 0 5px;
+    /*padding; top right bottom left*/
+}
+
+#cpu {
+    background-color: @color2;
+    border-radius: 0 15px 15px 0;
+    padding: 0 10px 0 20px;
+    margin-left: -15px;
+    color: #000000;
+}
+
+#memory {
+    background-color: @color3;
+    border-radius: 0 15px 15px 0;
+    padding: 0 10px 0 20px;
+    margin-left: -15px;
+}
+
+#disk {
+    background-color: @color4;
+    border-radius: 0 15px 15px 0;
+    padding: 0 10px 0 20px;
+    margin-left: -15px;
+}
+
+#pulseaudio {
+    background-color: @color4;
+    color: #000000;
+}
+
+/*
+#pulseaudio.muted {
+    background-color: #90b1b1;
+    color: #2a5c45;
+}
+*/
+
+#network {
+    background-color: @color3;
+}
+
+#network.disconnected {
+    background-color: #f53c3c;
 }
 
 #battery {
-    background-color: #ffffff;
+    background-color: @color2;
     color: #000000;
 }
 
 #battery.charging, #battery.plugged {
     color: #ffffff;
-    background-color: #26A65B;
+    background-color: @color2;
 }
 
 @keyframes blink {
@@ -154,66 +189,12 @@ button:hover {
     animation-direction: alternate;
 }
 
-#power-profiles-daemon {
-    padding-right: 15px;
-}
-
-#power-profiles-daemon.performance {
-    background-color: #f53c3c;
-    color: #ffffff;
-}
-
-#power-profiles-daemon.balanced {
-    background-color: #2980b9;
-    color: #ffffff;
-}
-
-#power-profiles-daemon.power-saver {
-    background-color: #2ecc71;
-    color: #000000;
+#custom-power {
+    background-color: @color1;
 }
 
 label:focus {
     background-color: #000000;
-}
-
-#memory {
-    background-color: #9b59b6;
-}
-
-#disk {
-    background-color: #964B00;
-}
-
-#backlight {
-    background-color: #90b1b1;
-}
-
-#network {
-    background-color: #2980b9;
-}
-
-#network.disconnected {
-    background-color: #f53c3c;
-}
-
-#pulseaudio {
-    background-color: #f1c40f;
-    color: #000000;
-}
-
-#pulseaudio.muted {
-    background-color: #90b1b1;
-    color: #2a5c45;
-}
-
-#wireplumber {
-    background-color: #fff0f5;
-    color: #000000;
-}
-
-#wireplumber.muted {
-    background-color: #f53c3c;
 }
 
 #custom-media {
@@ -275,30 +256,6 @@ label:focus {
 
 #mpd.paused {
     background-color: #51a37a;
-}
-
-#language {
-    background: #00b093;
-    color: #740864;
-    padding: 0 5px;
-    margin: 0 5px;
-    min-width: 16px;
-}
-
-#keyboard-state {
-    background: #97e1ad;
-    color: #000000;
-    padding: 0 0px;
-    margin: 0 5px;
-    min-width: 16px;
-}
-
-#keyboard-state > label {
-    padding: 0 5px;
-}
-
-#keyboard-state > label.locked {
-    background: rgba(0, 0, 0, 0.2);
 }
 
 #scratchpad {

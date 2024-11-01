@@ -6,13 +6,17 @@
     // "position": "bottom", // Waybar position (top|bottom|left|right)
     "height": 30, // Waybar height (to be removed for auto height)
     "width": 1920, // Waybar width
-    "spacing": 4, // Gaps between modules (4px)
+    "spacing": 0, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": [
         //"hyprland/workspaces",
         //"hyprland/submap",
         //"sway/scratchpad",
         //"custom/media"
+        "clock",
+        "cpu",
+        "memory",
+        "disk",
         "hyprland/window"
     ],
     "modules-center": [
@@ -26,9 +30,9 @@
         //"cpu",
         //"memory",
         //"temperature",
-        //"battery",
-        "group/hardware",
-        "clock",
+        "battery",
+        //"group/hardware",
+        //"clock",
         //"tray",
         "custom/power"
     ],
@@ -96,22 +100,6 @@
         "format": "{percent}% {icon}",
         "format-icons": ["", "", "", "", "", "", "", "", ""]
     },
-//    "battery#bat2": {
-//        "bat": "BAT0"
-//    },
-    "power-profiles-daemon": {
-      "format": "{icon}",
-      "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
-      "tooltip": true,
-      "format-icons": {
-        "default": "",
-        "performance": "",
-        "balanced": "",
-        "power-saver": ""
-      }
-    },
-
-    
     "custom/media": {
         "format": "{icon} {}",
         "return-type": "json",
