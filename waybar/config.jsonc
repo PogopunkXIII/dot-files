@@ -14,9 +14,9 @@
         //"sway/scratchpad",
         //"custom/media"
         "clock",
-        "cpu",
-        "memory",
-        "disk",
+        //"cpu",
+        //"memory",
+        //"disk",
         "hyprland/window"
     ],
     "modules-center": [

@@ -1,4 +1,5 @@
 @import url("/home/pogopunkxiii/.cache/wal/colors-waybar.css");
+@define-color textColor #222222;
 
 * {
     /* `otf-font-awesome` is required to be installed for icons */
@@ -12,7 +13,7 @@ window#waybar {
     color: #ffffff;
     transition-property: background-color;
     transition-duration: .5s;
-    opacity:0.8;
+    opacity:0.85;
 }
 
 window#waybar.hidden {
@@ -56,9 +57,15 @@ button:hover {
     background-color: #255E9F;
 }
 
+#workspaces {
+    margin: 0 0px;
+}
+
+
 #workspaces button {
-    padding: 0 3px;
-    background-color: transparent;
+    /*padding; top right bottom left*/
+    padding: 0 5px 0 5px;
+    /*background-color: @color5;*/
     color: #ffffff;
 }
 
@@ -98,8 +105,9 @@ button:hover {
 #power-profiles-daemon,
 
 #window,
-#workspaces {
-    margin: 0 0px;
+
+#window {
+    padding-left: 5;
 }
 
 /* If workspaces is the leftmost module, omit left margin */
@@ -113,37 +121,57 @@ button:hover {
 }
 
 #clock {
+    color: @textColor;
     background-color: @color1;
+    /*border-radius: top-left top-right bottom-right botom-left*/
     border-radius: 0 15px 15px 0;
-    padding: 0 10px 0 5px;
     /*padding; top right bottom left*/
+    padding: 0 8px 0 8px;
+    /*margin-right: -15px;*/
+    border: 2px solid @color0;
 }
 
 #cpu {
+    color: @textColor;
     background-color: @color2;
-    border-radius: 0 15px 15px 0;
-    padding: 0 10px 0 20px;
-    margin-left: -15px;
-    color: #000000;
+    /*border-radius: top-left top-right bottom-right botom-left*/
+    border-radius: 15px;
+    /*padding; top right bottom left*/
+    padding: 0 10px 0 8px;
+    /*margin-right: -15px;*/
+    border: 2px solid @color0
 }
 
 #memory {
+    color: @textColor;
     background-color: @color3;
-    border-radius: 0 15px 15px 0;
-    padding: 0 10px 0 20px;
-    margin-left: -15px;
+    /*border-radius: top-left top-right bottom-right botom-left*/
+    border-radius: 15px;
+    /*padding; top right bottom left*/
+    padding: 0 10px 0 8px;
+    /*margin-right: -15px;*/
+    border: 2px solid @color0
 }
 
 #disk {
+    color: @textColor;
     background-color: @color4;
-    border-radius: 0 15px 15px 0;
-    padding: 0 10px 0 20px;
-    margin-left: -15px;
+    /*border-radius: top-left top-right bottom-right botom-left*/
+    border-radius: 15px;
+    /*padding; top right bottom left*/
+    padding: 0 8px 0 8px;
+    border: 2px solid @color0
 }
 
 #pulseaudio {
+    color: @textColor; 
     background-color: @color4;
-    color: #000000;
+    /*border-radius: top-left top-right bottom-right botom-left*/
+    border-radius: 15px 0 0 15px;
+    /*padding; top right bottom left*/
+    padding: 0 20px 0 10px;
+    border: 2px solid @color0;
+
 }
 
 /*
@@ -154,7 +182,14 @@ button:hover {
 */
 
 #network {
+    color: @textColor;
     background-color: @color3;
+    /*border-radius: top-left top-right bottom-right botom-left*/
+    border-radius: 15px 0 0 15px;
+    /*padding; top right bottom left*/
+    padding: 0 27px 0 10px;
+    margin-left: -15px;
+    border: 2px solid @color0;
 }
 
 #network.disconnected {
@@ -162,8 +197,14 @@ button:hover {
 }
 
 #battery {
+    color: @textColor;
     background-color: @color2;
-    color: #000000;
+    /*border-radius: top-left top-right bottom-right botom-left*/
+    border-radius: 15px 0 0 15px;
+    /*padding; top right bottom left*/
+    padding: 0 25px 0 10px;
+    margin-left: -15px;
+    border: 2px solid @color0;
 }
 
 #battery.charging, #battery.plugged {
@@ -190,7 +231,14 @@ button:hover {
 }
 
 #custom-power {
+    color: @textColor;
     background-color: @color1;
+    /*border-radius: top-left top-right bottom-right botom-left*/
+    border-radius: 15px 0 0 15px;
+    /*padding; top right bottom left*/
+    padding: 0 5px 0 10px;
+    margin-left: -15px;
+    border: 2px solid @color0;
 }
 
 label:focus {
