@@ -67,3 +67,5 @@ require'nvim-treesitter.configs'.setup {
 --turns on folding, unsure how I feel about this one
 vim.wo.foldmethod = 'expr'
 vim.wo.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
+vim.wo.foldcolumn = 'auto:9'
+--vim.opt.foldtext = 'v:lua.vim.treesitter.foldtext()'
