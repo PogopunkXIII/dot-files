@@ -22,6 +22,10 @@ require('onedark').setup {
 }
 require('onedark').load()
 
+-- disable netrw for nvim-tree
+vim.g.loaded_netrw       = 1
+vim.g.loaded_netrwPlugin = 1
+
 require'nvim-treesitter.configs'.setup {
   ensure_installed = { 
     "typescript", 
@@ -68,4 +72,3 @@ require'nvim-treesitter.configs'.setup {
 vim.wo.foldmethod = 'expr'
 vim.wo.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
 vim.wo.foldcolumn = 'auto:9'
---vim.opt.foldtext = 'v:lua.vim.treesitter.foldtext()'
