@@ -19,11 +19,13 @@ if [ ${#FILES[@]} -eq 0 ]; then
 fi
 
 # Select a random file and store the path in a variable
-RANDOM_FILE=${FILES[RANDOM % ${#FILES[@]}]}
+# Select a random file using shuf
+RANDOM_FILE=$(echo "${FILES[@]}" | tr ' ' '\n' | shuf -n 1)
 
 # Output the random file path
 echo "Randomly selected file path: $RANDOM_FILE"
 
-wal -i $RANDOM_FILE
+#wal -i $RANDOM_FILE
 #$HOME/.confg/waybar/launch-waybar
+#ags -r "setWallpaper('$RANDOM_FILE')"
 swww img $RANDOM_FILE --transition-step 10
