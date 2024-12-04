@@ -246,7 +246,7 @@ require("lazy").setup({
 	{ -- Fuzzy Finder (files, lsp, etc)
 		"nvim-telescope/telescope.nvim",
 		event = "VimEnter",
-		branch = "0.1.x",
+		branch = "master",
 		dependencies = {
 			"nvim-lua/plenary.nvim",
 			{ -- If encountering errors, see telescope-fzf-native README for installation instructions
@@ -296,12 +296,15 @@ require("lazy").setup({
 				defaults = {
 					--show filename at the top of the preivew window
 					dynamic_preview_title = true,
-					--shorten file paths in results window
-					path_display = {
-						shorten = { len = 3, exclude = { -1, -2 } },
+				},
+				pickers = {
+					lsp_references = {
+						path_display = {
+							filename_first = { reverse_directories = false },
+							shorten = { len = 3 },
+						},
 					},
 				},
-				-- pickers = {}
 				extensions = {
 					["ui-select"] = {
 						require("telescope.themes").get_dropdown(),
