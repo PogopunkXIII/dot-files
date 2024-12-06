@@ -101,6 +101,8 @@ vim.keymap.set("n", "<C-l>", "<C-w><C-l>", { desc = "Move focus to the right win
 vim.keymap.set("n", "<C-j>", "<C-w><C-j>", { desc = "Move focus to the lower window" })
 vim.keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper window" })
 
+vim.keymap.set("n", "<C-d>", "<C-d>zz", { desc = "Move down half page and center view" })
+vim.keymap.set("n", "<C-u>", "<C-u>zz", { desc = "Move up half page and center view" })
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 
@@ -300,8 +302,8 @@ require("lazy").setup({
 				pickers = {
 					lsp_references = {
 						path_display = {
-							filename_first = { reverse_directories = false },
-							shorten = { len = 3 },
+							filename_first = { reverse_directories = true },
+							shorten = { len = 1, exclude = { -1, -2, -3 } },
 						},
 					},
 				},
@@ -511,14 +513,14 @@ require("lazy").setup({
 			})
 
 			-- Change diagnostic symbols in the sign column (gutter)
-			-- if vim.g.have_nerd_font then
-			--   local signs = { ERROR = '', WARN = '', INFO = '', HINT = '' }
-			--   local diagnostic_signs = {}
-			--   for type, icon in pairs(signs) do
-			--     diagnostic_signs[vim.diagnostic.severity[type]] = icon
-			--   end
-			--   vim.diagnostic.config { signs = { text = diagnostic_signs } }
-			-- end
+			if vim.g.have_nerd_font then
+				local signs = { ERROR = "", WARN = "", INFO = "", HINT = "" }
+				local diagnostic_signs = {}
+				for type, icon in pairs(signs) do
+					diagnostic_signs[vim.diagnostic.severity[type]] = icon
+				end
+				vim.diagnostic.config({ signs = { text = diagnostic_signs } })
+			end
 
 			-- LSP servers and clients are able to communicate to each other what features they support.
 			--  By default, Neovim doesn't support everything that is in the LSP specification.
@@ -638,7 +640,8 @@ require("lazy").setup({
 				-- python = { "isort", "black" },
 				--
 				-- You can use 'stop_after_first' to run the first available formatter from the list
-				-- javascript = { "prettierd", "prettier", stop_after_first = true },
+				javascript = { "prettierd", "prettier", stop_after_first = true },
+				typescript = { "prettierd", "prettier", stop_after_first = true },
 			},
 		},
 	},
@@ -793,7 +796,7 @@ require("lazy").setup({
 			--
 			-- Examples:
 			--  - va)  - [V]isually select [A]round [)]paren
-			--  - yinq - [Y]ank [I]nside [N]ext [Q]uote
+			--  - yiq - [Y]ank [I]nside next [Q]uote
 			--  - ci'  - [C]hange [I]nside [']quote
 			require("mini.ai").setup({ n_lines = 500 })
 
@@ -857,6 +860,7 @@ require("lazy").setup({
 			},
 			indent = { enable = true, disable = { "ruby" } },
 		},
+
 		-- There are additional nvim-treesitter modules that you can use to interact
 		-- with nvim-treesitter. You should go explore a few and see what interests you:
 		--
@@ -864,6 +868,7 @@ require("lazy").setup({
 		--    - Show your current context: https://github.com/nvim-treesitter/nvim-treesitter-context
 		--    - Treesitter + textobjects: https://github.com/nvim-treesitter/nvim-treesitter-textobjects
 	},
+	-- require("treesitter-context"),
 	{
 		"stevearc/oil.nvim",
 		---@module 'oil'
