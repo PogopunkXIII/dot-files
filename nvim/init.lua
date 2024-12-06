@@ -70,6 +70,9 @@ vim.opt.scrolloff = 10
 
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
+--vim.keymap.set("n", "<leader><leader>x", "<cmd>source %<CR>", { desc = "re-load this file" })
+--vim.keymap.set("n", "<leader>x", ":.lua<CR>", { desc = "re-load this file" })
+--vim.keymap.set("v", "<leader><leader>x", ":lua<CR>", { desc = "re-load this file" })
 
 -- Clear highlights on search when pressing <Esc> in normal mode
 --  See `:help hlsearch`
@@ -860,7 +863,6 @@ require("lazy").setup({
 			},
 			indent = { enable = true, disable = { "ruby" } },
 		},
-
 		-- There are additional nvim-treesitter modules that you can use to interact
 		-- with nvim-treesitter. You should go explore a few and see what interests you:
 		--
@@ -868,7 +870,7 @@ require("lazy").setup({
 		--    - Show your current context: https://github.com/nvim-treesitter/nvim-treesitter-context
 		--    - Treesitter + textobjects: https://github.com/nvim-treesitter/nvim-treesitter-textobjects
 	},
-	-- require("treesitter-context"),
+	{ "nvim-treesitter/nvim-treesitter-context" },
 	{
 		"stevearc/oil.nvim",
 		---@module 'oil'
@@ -928,4 +930,4 @@ require("lazy").setup({
 })
 
 -- The line beneath this is called `modeline`. See `:help modeline`
--- vim: ts=2 sts=2 sw=2 et
+--vim: ts=2 sts=2 sw=2 et
