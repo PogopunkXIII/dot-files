@@ -1,0 +1,26 @@
+# change window focus within space
+ctrl - s  : yabai -m window --focus south
+ctrl - w    : yabai -m window --focus north
+ctrl - a  : yabai -m window --focus west
+ctrl - d : yabai -m window --focus east
+
+# move window to prev/next space
+shift + alt - p : yabai -m window --space prev;
+shift + alt - n : yabai -m window --space next;
+
+# move window to particular space
+shift + alt - 1 : yabai -m window --space 1;
+shift + alt - 2 : yabai -m window --space 2;
+shift + alt - 3 : yabai -m window --space 3;
+shift + alt - 4 : yabai -m window --space 4;
+shift + alt - 5 : yabai -m window --space 5;
+shift + alt - 6 : yabai -m window --space 6;
+shift + alt - 7 : yabai -m window --space 7;
+
+# controlling yabai
+ctrl + alt - q : yabai --stop-service
+ctrl + alt - s : yabai --start-service
+ctrl + alt - r : yabai --restart-service
+
+# even out spacing
+shift + alt - e : yabai -m space --balance;
