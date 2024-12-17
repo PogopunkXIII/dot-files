@@ -1,31 +1,31 @@
 # change window focus within space
-ctrl - s : yabai -m window --focus south
-ctrl - w : yabai -m window --focus north
-ctrl - a : yabai -m window --focus west
-ctrl - d : yabai -m window --focus east
+ctrl - j : yabai -m window --focus south
+ctrl - k : yabai -m window --focus north
+ctrl - h : yabai -m window --focus west
+ctrl - l : yabai -m window --focus east
 
 #change focus between external displays (left and right)
 alt - s: yabai -m display --focus west
 alt - g: yabai -m display --focus east
 
 # swap windows
-ctrl + shift - s : yabai -m window --swap south
-ctrl + shift - w : yabai -m window --swap north
-ctrl + shift - a : yabai -m window --swap west
-ctrl + shift - d : yabai -m window --swap east
+ctrl + shift - j : yabai -m window --swap south
+ctrl + shift - k : yabai -m window --swap north
+ctrl + shift - h : yabai -m window --swap west
+ctrl + shift - l : yabai -m window --swap east
 
 # move window to prev/next space
-shift + alt - p : yabai -m window --space prev;
-shift + alt - n : yabai -m window --space next;
+shift + alt - p : yabai -m window --space prev
+shift + alt - n : yabai -m window --space next
 
 # move window to particular space
-shift + alt - 1 : yabai -m window --space 1;
-shift + alt - 2 : yabai -m window --space 2;
-shift + alt - 3 : yabai -m window --space 3;
-shift + alt - 4 : yabai -m window --space 4;
-shift + alt - 5 : yabai -m window --space 5;
-shift + alt - 6 : yabai -m window --space 6;
-shift + alt - 7 : yabai -m window --space 7;
+shift + alt - 1 : yabai -m window --space 1
+shift + alt - 2 : yabai -m window --space 2
+shift + alt - 3 : yabai -m window --space 3
+shift + alt - 4 : yabai -m window --space 4
+shift + alt - 5 : yabai -m window --space 5
+shift + alt - 6 : yabai -m window --space 6
+shift + alt - 7 : yabai -m window --space 7
 
 # controlling yabai
 ctrl + alt - q : yabai --stop-service
