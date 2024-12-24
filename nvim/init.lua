@@ -107,6 +107,10 @@ vim.keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper win
 
 vim.keymap.set("n", "<C-d>", "<C-d>zz", { desc = "Move down half page and center view" })
 vim.keymap.set("n", "<C-u>", "<C-u>zz", { desc = "Move up half page and center view" })
+
+vim.keymap.set("n", "<M-j>", "<cmd>cnext<CR>", { desc = "Move down to the next item in the QF list" })
+vim.keymap.set("n", "<M-k>", "<cmd>cprev<CR>", { desc = "Move up to the previous item in the QF list" })
+
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 
