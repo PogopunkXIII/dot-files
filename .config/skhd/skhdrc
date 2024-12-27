@@ -9,10 +9,10 @@ alt - s: yabai -m display --focus west
 alt - g: yabai -m display --focus east
 
 # swap windows
-ctrl + shift - j : yabai -m window --swap south
-ctrl + shift - k : yabai -m window --swap north
-ctrl + shift - h : yabai -m window --swap west
-ctrl + shift - l : yabai -m window --swap east
+ctrl + shift - down  : yabai -m window --swap south
+ctrl + shift - up    : yabai -m window --swap north
+ctrl + shift - left  : yabai -m window --swap west
+ctrl + shift - right : yabai -m window --swap east
 
 # move window to prev/next space
 shift + alt - p : yabai -m window --space prev
