@@ -149,6 +149,10 @@ alias bic="cd ~/code/cosmos/packages/business-intelligence/src/components"
 alias devbi="npm run --prefix ~/code/cosmos dev"
 alias vim="nvim"
 
+gcnv() {
+  git commit -m "$1" --no-verify
+}
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
