@@ -178,7 +178,6 @@ return {
 			css_variables = {},
 			cssmodules_ls = {},
 			ast_grep = {},
-			cucumber_language_server = {},
 			lua_ls = {
 				-- cmd = {...},
 				-- filetypes = { ...},

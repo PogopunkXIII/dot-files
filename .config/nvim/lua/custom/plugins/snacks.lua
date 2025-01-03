@@ -14,20 +14,18 @@ return {
 		opts = {
 			dashboard = {
 				sections = {
-					{ section = "header" },
 					{
-						pane = 2,
 						section = "terminal",
-						cmd = "ascii-image-converter ~/.config/icons/synthwave-sun.png -d 40,20 -C",
-						height = 5,
+						cmd = "ascii-image-converter ~/.config/icons/synthwave-sun.png -d 60,30 -C -b --dither",
+						height = 30,
 						padding = 1,
 					},
-					{ section = "keys", gap = 1, padding = 1 },
+					{ section = "keys", padding = 1 },
 					{
-						pane = 2,
 						icon = " ",
 						title = "Recent Files",
 						section = "recent_files",
+						limit = 10,
 						indent = 2,
 						padding = 1,
 					},
