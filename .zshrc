@@ -9,7 +9,7 @@ fi
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/mailj/.oh-my-zsh"
+export ZSH="/home/pogopunkxiii/.oh-my-zsh"
 
 export JAVA_HOME=$(/usr/libexec/java_home -v 11.0.20.1)
 
