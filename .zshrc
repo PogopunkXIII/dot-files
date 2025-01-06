@@ -146,7 +146,7 @@ alias cosmos="cd ~/code/cosmos"
 alias bi="cd ~/code/cosmos/packages/business-intelligence"
 alias bic="cd ~/code/cosmos/packages/business-intelligence/src/components"
 
-alias devbi="npm run --prefix ~/code/cosmos dev"
+alias devserv="npm run --prefix ~/code/cosmos dev"
 alias vim="nvim"
 
 gcnv() {
