@@ -5,9 +5,8 @@ return {
 			-- Better Around/Inside textobjects
 			--
 			-- Examples:
-			--  - va)  - [V]isually select [A]round [)]paren
 			--  - yiq - [Y]ank [I]nside next [Q]uote
-			--  - ci'  - [C]hange [I]nside [']quote
+			--  - dib = [D]elete [I]nside next [B]racket/paren
 			require("mini.ai").setup({ n_lines = 500 })
 
 			-- Add/delete/replace surroundings (brackets, quotes, etc.)

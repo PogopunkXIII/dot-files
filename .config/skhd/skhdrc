@@ -28,7 +28,7 @@ ctrl + shift - 6 : yabai -m window --space 6
 ctrl + shift - 7 : yabai -m window --space 7
 ctrl + shift - 8 : yabai -m window --space 8
 ctrl + shift - 9 : yabai -m window --space 9
-ctrl + shift - 0 : yabai -m window --space 0
+ctrl + shift - 0 : yabai -m window --space 10
 
 # controlling yabai
 ctrl + alt - q : yabai --stop-service
