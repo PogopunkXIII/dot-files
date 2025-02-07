@@ -94,5 +94,36 @@ return { -- Fuzzy Finder (files, lsp, etc)
 		vim.keymap.set("n", "<leader>sn", function()
 			builtin.find_files({ cwd = vim.fn.stdpath("config") })
 		end, { desc = "[S]earch [N]eovim files" })
+
+		function vim.getVisualSelection()
+			local current_clipboard_content = vim.fn.getreg('"')
+
+			vim.cmd('noau normal! "vy"')
+			local text = vim.fn.getreg("v")
+			vim.fn.setreg("v", {})
+
+			vim.fn.setreg('"', current_clipboard_content)
+
+			text = string.gsub(text, "\n", "")
+			if #text > 0 then
+				return text
+			else
+				return ""
+			end
+		end
+
+		local keymap = vim.keymap.set
+		local tb = require("telescope.builtin")
+		local opts = { noremap = true, silent = true }
+
+		keymap("v", "<space>s", function()
+			local text = vim.getVisualSelection()
+			bt.current_buffer_fuzzy_find({ default_text = text })
+		end, opts)
+
+		keymap("v", "<space>S", function()
+			local text = vim.getVisualSelection()
+			bt.grep_string({ search = text })
+		end, opts)
 	end,
 }

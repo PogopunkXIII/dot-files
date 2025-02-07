@@ -178,6 +178,7 @@ return {
 			css_variables = {},
 			cssmodules_ls = {},
 			ast_grep = {},
+			eslint = {},
 			lua_ls = {
 				-- cmd = {...},
 				-- filetypes = { ...},
@@ -207,6 +208,7 @@ return {
 		local ensure_installed = vim.tbl_keys(servers or {})
 		vim.list_extend(ensure_installed, {
 			"stylua", -- Used to format Lua code
+			"eslint-lsp",
 			"prettier",
 			"prettierd",
 		})

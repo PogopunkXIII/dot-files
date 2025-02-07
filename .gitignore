@@ -1,2 +1,3 @@
 *.log
 dconf/
+.config/github-copilot
