@@ -143,6 +143,7 @@ alias suis="cd ~/code/studiox-ui-service"
 alias sui="cd ~/code/studiox-ui-service"
 alias uis="cd ~/code/studiox-ui-service"
 alias cosmos="cd ~/code/cosmos"
+alias prpc="cd ~/code/prpc-platform"
 alias bi="cd ~/code/cosmos/packages/business-intelligence"
 alias bic="cd ~/code/cosmos/packages/business-intelligence/src/components"
 
