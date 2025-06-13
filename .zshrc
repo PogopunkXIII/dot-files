@@ -147,8 +147,9 @@ alias prpc="cd ~/code/prpc-platform"
 alias bi="cd ~/code/cosmos/packages/business-intelligence"
 alias bic="cd ~/code/cosmos/packages/business-intelligence/src/components"
 
-alias devserv="npm run --prefix ~/code/cosmos dev"
+alias dev="npm run --prefix ~/code/cosmos dev"
 alias vim="nvim"
+alias nvim-config="cd ~/dot-files/.config/nvim/"
 
 gcnv() {
   git commit -m "$1" --no-verify
