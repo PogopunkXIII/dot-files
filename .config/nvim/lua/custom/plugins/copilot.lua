@@ -25,6 +25,8 @@ return {
 		end,
 	},
 	{
+		-- USED FOR NVIM CMP, NOT USED FOR BLINK
+		enabled=false,
 		"zbirenbaum/copilot-cmp",
 		config = function()
 			require("copilot_cmp").setup()
