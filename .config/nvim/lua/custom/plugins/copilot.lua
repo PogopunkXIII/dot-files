@@ -1,5 +1,17 @@
 return {
 	{
+		"zbirenbaum/copilot.lua",
+		cmd = "Copilot",
+		event = "InsertEnter",
+		config = function()
+			require("copilot").setup({
+				suggestion = { enabled = false },
+				panel = { enabled = false },
+			})
+		end,
+	},
+	{
+		-- OLD, usinmg copilot.lua
 		"github/copilot.vim",
 		enabled = false,
 		config = function()
@@ -14,19 +26,8 @@ return {
 		end,
 	},
 	{
-		"zbirenbaum/copilot.lua",
-		cmd = "Copilot",
-		event = "InsertEnter",
-		config = function()
-			require("copilot").setup({
-				suggestion = { enabled = false },
-				panel = { enabled = false },
-			})
-		end,
-	},
-	{
 		-- USED FOR NVIM CMP, NOT USED FOR BLINK
-		enabled=false,
+		enabled = false,
 		"zbirenbaum/copilot-cmp",
 		config = function()
 			require("copilot_cmp").setup()

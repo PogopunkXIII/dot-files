@@ -32,6 +32,7 @@ return {
 			},
 			"folke/lazydev.nvim",
 			"giuxtaposition/blink-cmp-copilot",
+			{ "echasnovski/mini.icons", opts = {} },
 		},
 		--- @module 'blink.cmp'
 		--- @type blink.cmp.Config
@@ -74,6 +75,23 @@ return {
 				-- By default, you may press `<c-space>` to show the documentation.
 				-- Optionally, set `auto_show = true` to show the documentation after a delay.
 				documentation = { auto_show = false, auto_show_delay_ms = 500 },
+				menu = {
+					draw = {
+						components = {
+							kind = {
+								-- (optional) use highlights from mini.icons
+								highlight = function(ctx)
+									local _, hl, _ = require("mini.icons").get("lsp", ctx.kind)
+									return hl
+								end,
+							},
+						},
+						columns = {
+							{ "label", "label_description", gap = 1 },
+							{ "kind" },
+						},
+					},
+				},
 			},
 
 			sources = {
