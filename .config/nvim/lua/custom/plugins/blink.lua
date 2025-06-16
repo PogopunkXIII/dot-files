@@ -98,6 +98,7 @@ return {
 				default = { "lsp", "path", "snippets", "buffer", "copilot" },
 				per_filetype = {
 					lua = { inherit_defaults = true, "lazydev" },
+					codecompanion = { "codecompanion" },
 				},
 				providers = {
 					snippets = { score_offset = 1 },
