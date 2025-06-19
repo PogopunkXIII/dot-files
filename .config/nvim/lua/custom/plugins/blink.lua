@@ -95,7 +95,8 @@ return {
 			},
 
 			sources = {
-				default = { "lsp", "path", "snippets", "buffer", "copilot" },
+				-- default = { "lsp", "path", "snippets", "buffer", "copilot" },
+				default = { "lsp", "path", "snippets", "buffer" },
 				per_filetype = {
 					lua = { inherit_defaults = true, "lazydev" },
 					codecompanion = { "codecompanion" },
@@ -106,12 +107,12 @@ return {
 					path = { score_offset = 3 },
 					lsp = { score_offset = 4 },
 					lazydev = { module = "lazydev.integrations.blink", score_offset = 100 },
-					copilot = {
-						name = "copilot",
-						module = "blink-cmp-copilot",
-						score_offset = 1000,
-						async = true,
-					},
+					-- copilot = {
+					-- 	name = "copilot",
+					-- 	module = "blink-cmp-copilot",
+					-- 	score_offset = 1000,
+					-- 	async = true,
+					-- },
 				},
 			},
 

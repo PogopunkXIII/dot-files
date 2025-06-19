@@ -1,4 +1,3 @@
-local mappings = require("telescope.mappings")
 return { -- Fuzzy Finder (files, lsp, etc)
 	"nvim-telescope/telescope.nvim",
 	event = "VimEnter",
@@ -24,7 +23,6 @@ return { -- Fuzzy Finder (files, lsp, etc)
 		{ "nvim-tree/nvim-web-devicons", enabled = vim.g.have_nerd_font },
 	},
 	config = function()
-		local open_with_trouble = require("trouble.sources.telescope").open
 		-- See `:help telescope` and `:help telescope.setup()`
 		require("telescope").setup({
 			-- You can put your default mappings / updates / etc. in here
@@ -34,10 +32,6 @@ return { -- Fuzzy Finder (files, lsp, etc)
 			defaults = {
 				--show filename at the top of the preivew window
 				dynamic_preview_title = true,
-				mappings = {
-					n = { ["<c-x>"] = open_with_trouble },
-					i = { ["<c-x>"] = open_with_trouble },
-				},
 			},
 			pickers = {
 				lsp_references = {
