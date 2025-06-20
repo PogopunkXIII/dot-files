@@ -102,7 +102,7 @@ return {
 					codecompanion = { "codecompanion" },
 				},
 				providers = {
-					snippets = { score_offset = 1 },
+					snippets = { score_offset = -100 },
 					buffer = { score_offset = 2 },
 					path = { score_offset = 3 },
 					lsp = { score_offset = 4 },

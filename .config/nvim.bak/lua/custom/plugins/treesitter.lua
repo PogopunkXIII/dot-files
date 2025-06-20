@@ -40,17 +40,4 @@ return {
 		--    - Show your current context: https://github.com/nvim-treesitter/nvim-treesitter-context
 		--    - Treesitter + textobjects: https://github.com/nvim-treesitter/nvim-treesitter-textobjects
 	},
-	{
-		"nvim-treesitter/nvim-treesitter-context",
-		enabled = false,
-		config = function()
-			require("treesitter-context").setup({
-				context = {
-					enable = true, -- Enable this plugin (Can be enabled/disabled later via commands)
-					multiline_threshold = 5,
-					max_lines = 5,
-				},
-			})
-		end,
-	},
 }
