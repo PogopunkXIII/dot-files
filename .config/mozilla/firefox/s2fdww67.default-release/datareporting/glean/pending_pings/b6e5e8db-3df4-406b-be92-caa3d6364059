@@ -1,3 +1,0 @@
-/submit/firefox-desktop/pageload-base-domain/1/b6e5e8db-3df4-406b-be92-caa3d6364059
-{"metrics":{"string_list":{"glean.ping.uploader_capabilities":["ohttp"]}},"events":[{"timestamp":0,"category":"perf","name":"page_load_domain","extra":{"load_type":"NORMAL","channel":"release","lcp_time":"385","domain":"google.com","glean_timestamp":"1779665457609","app_version_major":"151","http_ver":"2"}}]}
-{"headers":{},"body_has_info_sections":false,"ping_name":"pageload-base-domain","uploader_capabilities":["ohttp"]}
