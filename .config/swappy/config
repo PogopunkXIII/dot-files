@@ -1,0 +1,4 @@
+[Default]
+save_dir=$HOME/screenshots
+save_filename_format=%Y-%m-%d-%H:%M:%S-swappy.png
+paint_mode=brush
