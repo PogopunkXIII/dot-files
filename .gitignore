@@ -1,5 +1,6 @@
 *.log
 dconf/
 .config/github-copilot
-.config/mozilla/*
+.config/mozilla
 .config/Slack
+.DS_Store
