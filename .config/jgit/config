@@ -1,0 +1,12 @@
+[filesystem "Amazon.com Inc.|17.0.14|/dev/disk3s1"]
+	timestampResolution = 4000 nanoseconds
+	minRacyThreshold = 0 nanoseconds
+[filesystem "Homebrew|17.0.16|/dev/disk3s1"]
+	timestampResolution = 26000 nanoseconds
+	minRacyThreshold = 0 nanoseconds
+[filesystem "Homebrew|17.0.17|/dev/disk3s1"]
+	timestampResolution = 3000 nanoseconds
+	minRacyThreshold = 0 nanoseconds
+[filesystem "Eclipse Adoptium|21.0.10|/dev/disk3s1"]
+	timestampResolution = 11000 nanoseconds
+	minRacyThreshold = 0 nanoseconds

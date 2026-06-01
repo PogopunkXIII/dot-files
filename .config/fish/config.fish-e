@@ -14,3 +14,4 @@ if status is-interactive
     alias vim "nvim"
     alias ll "ls -la"
 end
+alias devx='just --timestamp -f /Users/mailj/code/pega-launchpad-configuration/lp-devx-cli/justfile'

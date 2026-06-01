@@ -6,7 +6,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:$HOME/.sdkman/bin/sdkman-init.sh:$PATH
+export PATH=$HOME/bin:/usr/local/bin:$HOME/.sdkman/bin/sdkman-init.sh:$HOME/code/kafka-local/kafka_2.13-4.1.0/bin/:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/mailj/.oh-my-zsh"
@@ -79,7 +79,7 @@ ZSH_THEME=""powerlevel10k/powerlevel10k""
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git history-search-multi-word)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -117,6 +117,8 @@ alias ll="ls -la"
 alias cat="bat"
 alias fk="fuck"
 
+export EDITOR=nvim
+
 alias runtime="cd ~/code/runtime-engine-lib"
 alias rel="cd ~/code/runtime-engine-lib"
 alias datakernel="cd ~/hermes/data-kernel-lib"
@@ -128,6 +130,7 @@ alias chaosctrl="kubectl"
 alias rundmc="cd ~/code/data-model-calculation-service"
 alias mcs="cd ~/code/model-calculation-service-core"
 alias mcsc="cd ~/code/model-calculation-service-core"
+alias mcsv="cd ~/code/model-calculation-service-view"
 alias asc="cd ~/code/authoring-service-core/"
 alias cas="cd ~/code/authoring-service-core/"
 alias gits="git status"
@@ -141,6 +144,7 @@ alias sui="cd ~/code/studiox-ui-service"
 alias uis="cd ~/code/studiox-ui-service"
 alias cosmos="cd ~/code/cosmos"
 alias prpc="cd ~/code/prpc-platform"
+alias oms="cd ~/code/operator-management-service/"
 alias bi="cd ~/code/cosmos/packages/business-intelligence"
 alias bic="cd ~/code/cosmos/packages/business-intelligence/src/components"
 
@@ -156,3 +160,7 @@ gcnv() {
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 eval $(thefuck --alias)
+export PATH="$PATH:$HOME/just"
+alias devx='just --timestamp -f /Users/mailj/code/pega-launchpad-configuration/lp-devx-cli/justfile'
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"

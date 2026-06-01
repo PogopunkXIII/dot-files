@@ -239,6 +239,7 @@ return {
 				cssmodules_ls = {},
 				ast_grep = {},
 				eslint = {},
+				marksman = {},
 				lua_ls = {
 					-- cmd = { ... },
 					-- filetypes = { ... },
@@ -273,6 +274,7 @@ return {
 				"stylua", -- Used to format Lua code
 				"eslint-lsp",
 				"prettier",
+				-- "markdownlint",
 				"prettierd",
 			})
 			require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
